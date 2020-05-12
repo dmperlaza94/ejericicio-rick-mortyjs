@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion de traumas de Morty</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Evaluación de traumas de <br> Morty causdos por Rick</h1>
+        <p>Seleccione 20 situaciones, el tipo de trauma y la calificacion</p>
+        <p>En el tipo de trauma seleccione...</p>
+        <ul>
+            <li><b>(P)</b> Para panico</li>
+            <li><b>(T)</b> Para trauma mental</li>
+            <li><b>(F)</b> Para daño fisico</li>
+        </ul>
+
+        <table border="1">
+            <thead>
+                <td>Situacion</td>
+                <td>Tipo de trauma</td>
+                <td>Calificacion</td>
+            </thead>
+            <tbody id="cuerpoTabla">
+                <tr>
+                    <td>Sutiacion #1</td>
+                    <td>
+                        <select class="tipoTrauma" name="tipoTrauma">
+                            <option value="">Seleccione</option>
+                            <option value="P">P</option>
+                            <option value="T">T</option>
+                            <option value="F">F</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input class="calificaionTrauma" type="number" name="calificaionTrauma" min="1" max="10">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <td>
+                    <button id="botonEnviar">Calcular Traumas</button>
+                </td>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="resultados">
+        <table border="1">
+            <thead>
+                <th>Tipo de trauma</th>
+                <th>Cantidad</th>
+                <th>Pomedio</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P</td>
+                    <td id="cantidadP"></td>
+                    <td id="tdPromedioP"></td>
+                </tr>
+                <tr>
+                    <td>T</td>
+                    <td id="cantidadT"></td>
+                    <td id="tdPromedioT"></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td id="cantidadF"></td>
+                    <td id="tdPromedioF"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
